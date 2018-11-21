@@ -1,3 +1,6 @@
+# Algorithm 6.2
+# Gaussian Elimination with partial pivoting
+
 function swap_rows(mat, row1, row2)
 	for i in 1:size(mat)[2]
 		p1 = mat[row1, i]
