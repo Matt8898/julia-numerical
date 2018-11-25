@@ -21,7 +21,6 @@ function sor(mat, approx, known, maxIter, tol, ω)
 					sum2 += (a[i, j]*approx[j]) + known[i]
 				end
 			end
-			sol[i] = (-sum1 - sum2)/a[i, i]
 			sol[i] = (1 - ω)approx[i] + (ω*(-sum1 -sum2))/a[i, i]
 		end
 		if LinearAlgebra.norm(sol - approx) < tol
